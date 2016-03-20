@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Asterisk + Twilio</title>
+		<meta charset="utf-8">
+		<script
+			  src="https://code.jquery.com/jquery-2.2.1.js"
+			  integrity="sha256-eNcUzO3jsv0XlJLveFEkbB8bA7/CroNpNVk3XpmnwHc="
+			  crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<style>
+			html, body{
+				background-color: #9933ff;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<h1>Asterisk + Twilio</h1>
+				<h4>User SMS Settings</h4>
+			</div>
+		</br>
+			<div class="row">
+				<form action="/settings" method="POST">
+				<div class="form-group">
+					    <label for="username">User Display Name ----> <%= name %></label>
+					    <input name="name" type="text" class="form-control" id="username" >
+					  </div>
+  					<div class="form-group">
+					    <label for="userextension">User Extension: ----> <%= exten %></label>
+					    <input name="exten" type="text" class="form-control" id="userextension" >
+					  </div>
+					  <div class="form-group">
+					    <label for="usermobile">User Mobile #: ----> <%= mobile %></label>
+					    <input name="mobile" type="number" class="form-control" id="usermobile" >
+					  </div>
+					  <button type="submit" class="btn btn-default">Submit</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
